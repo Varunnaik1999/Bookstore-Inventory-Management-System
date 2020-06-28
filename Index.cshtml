@@ -1,0 +1,40 @@
+﻿@model List<WebApplication1.Models.bookes>
+@{
+    ViewBag.Title = "Home Page";
+}
+    <a href="home/addNewBook"><button class="btn btn-success pull-right">Add New Book</button></a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>ISBN</th>
+            <th>Publisher</th>
+            <th>Year</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            foreach (var item in Model)
+            {
+        <tr>
+            <td>@item.Author</td>
+            <td>@item.Title</td>
+            <td>@item.ISBN</td>
+            <td>@item.Publisher</td>
+            <td>@item.YearIs</td>
+            <td>
+                <a href="home/edit?id=@item.ID"><button class="btn btn-success" type="button">Edit</button></a>
+                <a href="home/delte?id=@item.ID"><button class="btn btn-danger" type="button">Delete</button></a>
+</td>
+        </tr>
+                
+              
+
+            }
+        }
+       
+    </tbody>
+</table>
