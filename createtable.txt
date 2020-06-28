@@ -1,0 +1,8 @@
+create table bookes (
+ID int primary key Auto_increment,
+Title varchar(100),
+Author varchar(50),
+ISBN varchar(50),
+Publisher varchar(50),
+YearIs varchar(50)
+);
